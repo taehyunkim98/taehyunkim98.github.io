@@ -2,274 +2,62 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Projects | Taehyun Kim</title>
-<meta name="description" content="Selected robotics projects by Taehyun Kim.">
 <link rel="stylesheet" href="styles.css">
-
-<style>
-/* Minimal Projects Page */
-.projects-page{
-  padding:88px 0 110px;
-}
-
-.projects-title{
-  margin-bottom:58px;
-}
-
-.projects-title .eyebrow{
-  margin-bottom:10px;
-}
-
-.projects-title h1{
-  font-size:clamp(48px,7vw,88px);
-  max-width:900px;
-}
-
-.project-stack{
-  display:grid;
-  gap:20px;
-}
-
-.project-group{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:22px;
-  overflow:hidden;
-}
-
-.project-group.dark{
-  background:var(--dark);
-  color:#fff;
-  border-color:var(--dark);
-}
-
-.project-group-head{
-  padding:30px 32px 26px;
-  display:flex;
-  justify-content:space-between;
-  gap:28px;
-  align-items:flex-start;
-}
-
-.project-number{
-  font:12px monospace;
-  color:#8a94a0;
-  margin-bottom:8px;
-}
-
-.project-group h2{
-  font-size:clamp(30px,4vw,48px);
-}
-
-.project-subtitle{
-  margin-top:10px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-.dark .project-subtitle{
-  color:#aeb6c1;
-}
-
-.project-badge{
-  flex:0 0 auto;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--blue);
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:7px 10px;
-}
-
-.dark .project-badge{
-  border-color:#343b46;
-  color:#9fb3ff;
-}
-
-.project-list{
-  border-top:1px solid var(--line);
-}
-
-.dark .project-list{
-  border-top-color:#2b313c;
-}
-
-.project-row{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:24px;
-  padding:22px 32px;
-  border-bottom:1px solid var(--line);
-  align-items:center;
-}
-
-.project-row:last-child{
-  border-bottom:0;
-}
-
-.dark .project-row{
-  border-bottom-color:#2b313c;
-}
-
-.project-name{
-  font-weight:700;
-  font-size:17px;
-}
-
-.project-meta{
-  text-align:right;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.dark .project-meta{
-  color:#aeb6c1;
-}
-
-@media(max-width:760px){
-  .projects-page{
-    padding-top:64px;
-  }
-
-  .project-group-head{
-    display:block;
-  }
-
-  .project-badge{
-    display:inline-block;
-    margin-top:18px;
-  }
-
-  .project-row{
-    grid-template-columns:1fr;
-    gap:6px;
-  }
-
-  .project-meta{
-    text-align:left;
-  }
-}
-</style>
+<link rel="stylesheet" href="projects-video.css">
 </head>
-
 <body>
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="index.html">TAEHYUN KIM<b>.</b></a>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a class="active" href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="cv.html">CV</a>
-        <a href="about.html">About</a>
+<header><div class="wrap"><nav>
+<a class="brand" href="index.html">TAEHYUN KIM<b>.</b></a>
+<div class="links">
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a class="active" href="projects.html">Projects</a>
+<a href="publications.html">Publications</a>
+<a href="cv.html">CV</a>
+<a href="about.html">About</a>
+</div></nav></div></header>
+
+<main class="vp-page"><div class="wrap">
+  <div class="vp-title">
+    <div class="eyebrow">Projects</div>
+    <h1>Selected Robotics Projects</h1>
+  </div>
+
+  <div class="vp-projects">
+    <a class="vp-project" href="g1-model-based.html">
+      <div class="vp-project-media"></div>
+      <div class="vp-arrow">↗</div>
+      <div class="vp-project-content">
+        <div class="vp-kicker">Humanoid · Model-Based Control</div>
+        <h2>Unitree G1 Model-Based Control</h2>
+        <p>Heel-to-toe walking · Whole-body control · Footstep planning · Trajectory optimization</p>
       </div>
-    </nav>
+    </a>
+
+    <a class="vp-project dark" href="g1-rl.html">
+      <div class="vp-project-media"></div>
+      <div class="vp-arrow">↗</div>
+      <div class="vp-project-content">
+        <div class="vp-kicker">Humanoid · Reinforcement Learning</div>
+        <h2>Unitree G1 Reinforcement Learning</h2>
+        <p>Robust locomotion · Compliant footwear · Sim-to-real</p>
+      </div>
+    </a>
+
+    <a class="vp-project" href="twipr-mppi.html">
+      <div class="vp-project-media"></div>
+      <div class="vp-arrow">↗</div>
+      <div class="vp-project-content">
+        <div class="vp-kicker">Wheel-Legged · Humanoids 2024</div>
+        <h2>TWIP-R with Dynamic Variance MPPI</h2>
+        <p>Template model · MPPI · TRON1 hardware</p>
+      </div>
+    </a>
   </div>
-</header>
+</div></main>
 
-<main class="projects-page">
-  <div class="wrap">
-
-    <div class="projects-title">
-      <div class="eyebrow">Projects</div>
-      <h1>Selected Robotics Projects</h1>
-    </div>
-
-    <div class="project-stack">
-
-      <section class="project-group">
-        <div class="project-group-head">
-          <div>
-            <div class="project-number">01</div>
-            <h2>Wheel-Legged Robotics</h2>
-            <div class="project-subtitle">TWIP-R with Dynamic Variance MPPI</div>
-          </div>
-          <div class="project-badge">Humanoids 2024</div>
-        </div>
-
-        <div class="project-list">
-          <div class="project-row">
-            <div class="project-name">TWIP-R Template Model</div>
-            <div class="project-meta">Nonlinear Dynamics</div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Dynamic Variance MPPI</div>
-            <div class="project-meta">MPPI · Partial Feedback Linearization</div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">TRON1 Hardware Experiment</div>
-            <div class="project-meta">Tracking · Balancing · Disturbance Recovery</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="project-group">
-        <div class="project-group-head">
-          <div>
-            <div class="project-number">02</div>
-            <h2>Humanoid · Model-Based Control</h2>
-          </div>
-        </div>
-
-        <div class="project-list">
-          <div class="project-row">
-            <div class="project-name">Human-Like Heel-to-Toe Walking</div>
-            <div class="project-meta">FSM · Whole-Body Control</div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Online Footstep Planning</div>
-            <div class="project-meta">LIPM · DCM · MPC</div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Floating-Base QP Control</div>
-            <div class="project-meta">QP IK · Contact Constraints</div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Trajectory Optimization</div>
-            <div class="project-meta">Centroidal Dynamics · Contact Force</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="project-group dark">
-        <div class="project-group-head">
-          <div>
-            <div class="project-number">03</div>
-            <h2>Humanoid · Reinforcement Learning</h2>
-          </div>
-        </div>
-
-        <div class="project-list">
-          <div class="project-row">
-            <div class="project-name">Robust Locomotion under Compliant Footwear</div>
-            <div class="project-meta">Unitree G1 · PPO · Domain Randomization</div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Terrain-Adaptive Humanoid Locomotion</div>
-            <div class="project-meta">Learning-Based Control</div>
-          </div>
-          <div class="project-row">
-            <div class="project-name">Sim-to-Real Deployment</div>
-            <div class="project-meta">Real-Robot Validation</div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <span>© 2026 Taehyun Kim</span>
-    <span>Projects</span>
-  </div>
-</footer>
-
+<footer><div class="wrap foot"><span>© 2026 Taehyun Kim</span><span>Projects</span></div></footer>
 </body>
 </html>
