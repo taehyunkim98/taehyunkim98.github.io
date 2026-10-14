@@ -1,0 +1,61 @@
+
+/* Home social links */
+.social-links{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+
+.social-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#515a66;
+  font-size:13px;
+  font-weight:650;
+  transition:color .18s ease, transform .18s ease;
+}
+
+.social-link:hover{
+  color:var(--ink);
+  transform:translateY(-1px);
+}
+
+.social-icon{
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+}
+
+.social-icon svg{
+  width:23px;
+  height:23px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.youtube-icon svg path{
+  fill:currentColor;
+  stroke:none;
+}
+
+.linkedin-icon svg circle{
+  fill:currentColor;
+  stroke:none;
+}
+
+@media(max-width:700px){
+  .social-links{
+    gap:16px;
+  }
+
+  .social-link{
+    font-size:12px;
+  }
+}
