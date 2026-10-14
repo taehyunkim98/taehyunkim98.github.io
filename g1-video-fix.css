@@ -1,0 +1,115 @@
+
+/* G1 video gallery ratio fix */
+
+.g1-gallery{
+  display:flex;
+  flex-direction:column;
+  gap:42px;
+}
+
+.g1-section-label{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--blue);
+  margin-bottom:16px;
+}
+
+/* Shorts / portrait videos */
+.portrait-gallery{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.video-card-portrait{
+  width:min(360px,100%);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.video-frame-portrait{
+  width:100%;
+  aspect-ratio:9 / 16;
+  background:#0f1319;
+}
+
+.video-frame-portrait iframe{
+  width:100%;
+  height:100%;
+  display:block;
+  border:0;
+}
+
+/* Standard landscape research videos */
+.landscape-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+
+.video-card-landscape{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.video-frame-landscape{
+  aspect-ratio:16 / 9;
+  background:#10151c;
+  display:grid;
+  place-items:center;
+  padding:20px;
+  text-align:center;
+  color:#8f99a7;
+  font-size:13px;
+}
+
+.video-frame-landscape strong{
+  display:block;
+  color:#fff;
+  margin-bottom:5px;
+}
+
+.video-info-clean{
+  padding:18px 20px 20px;
+}
+
+.video-info-clean h3{
+  font-size:18px;
+  margin:0;
+  letter-spacing:-.025em;
+}
+
+.video-info-clean p{
+  margin:6px 0 0;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.video-tag-clean{
+  display:inline-block;
+  margin-top:10px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  color:var(--blue);
+}
+
+@media(max-width:760px){
+  .portrait-gallery{
+    justify-content:center;
+  }
+
+  .video-card-portrait{
+    width:min(320px,100%);
+  }
+
+  .landscape-gallery{
+    grid-template-columns:1fr;
+  }
+}
