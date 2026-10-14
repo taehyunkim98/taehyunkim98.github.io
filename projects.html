@@ -2,25 +2,274 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects | Taehyun Kim</title>
-<meta name="description" content="Robotics projects by Taehyun Kim: wheel-legged MPPI control, model-based humanoid control, and reinforcement-learning-based humanoid locomotion.">
+<meta name="description" content="Selected robotics projects by Taehyun Kim.">
 <link rel="stylesheet" href="styles.css">
+
 <style>
-.project-page{padding-bottom:110px}.projects-intro{display:flex;justify-content:space-between;gap:48px;align-items:flex-end}.projects-intro .summary{max-width:620px;color:var(--muted);font-size:18px}.track-section{margin-top:72px}.track-label{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}.track-label:after{content:"";height:1px;background:var(--line);flex:1}.feature-card{border:1px solid var(--line);border-radius:28px;background:#fff;overflow:hidden}.feature-head{display:grid;grid-template-columns:1.12fr .88fr;min-height:380px}.feature-copy{padding:42px}.feature-kicker{font-size:11px;font-weight:800;letter-spacing:.11em;color:var(--blue);text-transform:uppercase;margin-bottom:14px}.feature-copy h2{font-size:clamp(34px,4.8vw,62px)}.feature-copy .desc{margin-top:18px;font-size:17px;color:var(--muted);max-width:660px}.feature-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.feature-meta span{font-size:11px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:#58616d;background:#fff}.feature-media{background:radial-gradient(circle at 70% 35%,rgba(36,92,255,.30),transparent 28%),linear-gradient(145deg,#11151c,#202b3c);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:space-between}.feature-media .media-label{font:11px monospace;color:#aeb7c4;letter-spacing:.08em}.feature-media .media-symbol{font-size:88px;text-align:center;font-weight:800;color:#8fa8ff}.feature-media .media-note strong{display:block;font-size:18px}.feature-media .media-note span{display:block;margin-top:4px;color:#aeb7c4;font-size:12px}.pipeline{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.pipe-step{padding:26px 28px;min-height:150px;border-right:1px solid var(--line)}.pipe-step:last-child{border-right:0}.pipe-step .n{font:11px monospace;color:#8a94a0}.pipe-step h3{margin-top:28px;font-size:20px}.pipe-step p{margin-top:8px;font-size:14px;color:var(--muted)}.research-block{border:1px solid var(--line);border-radius:28px;background:#fff;overflow:hidden}.research-block.dark{background:#0d1015;color:#fff;border-color:#0d1015}.block-head{padding:38px 40px 30px;display:grid;grid-template-columns:1fr .85fr;gap:40px;align-items:end}.block-head h2{font-size:clamp(32px,4.5vw,54px)}.block-head p{color:var(--muted);font-size:16px}.dark .block-head p{color:#aeb6c1}.subprojects{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.dark .subprojects{border-top-color:#2b313c}.subproject{padding:28px 30px;min-height:190px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.subproject:nth-child(2n){border-right:0}.subproject:nth-last-child(-n+2){border-bottom:0}.dark .subproject{border-color:#2b313c}.subproject .meta{font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--blue)}.subproject h3{margin-top:10px;font-size:24px}.subproject p{margin-top:10px;color:var(--muted);font-size:14px}.dark .subproject p{color:#aeb6c1}.subproject .tags{margin-top:16px}.rl-highlight{display:grid;grid-template-columns:1.1fr .9fr;border-top:1px solid #2b313c}.rl-main{padding:34px 38px}.rl-main .meta{font-size:10px;font-weight:800;letter-spacing:.1em;color:#7e9bff}.rl-main h3{margin-top:10px;font-size:30px}.rl-main p{margin-top:12px;color:#aeb6c1}.rl-main .tags span{border-color:#343b46;color:#cad1d9}.rl-media{margin:24px;min-height:250px;border:1px dashed #465061;border-radius:20px;display:grid;place-items:center;text-align:center;padding:26px;color:#99a5b5}.rl-media strong{color:#fff;display:block;margin-bottom:6px}.footer-note{margin-top:28px;font-size:13px;color:var(--muted)}@media(max-width:860px){.projects-intro,.feature-head,.block-head,.rl-highlight{display:block}.projects-intro .summary{margin-top:18px}.pipeline{grid-template-columns:1fr}.pipe-step{border-right:0;border-bottom:1px solid var(--line)}.pipe-step:last-child{border-bottom:0}.subprojects{grid-template-columns:1fr}.subproject,.subproject:nth-child(2n),.subproject:nth-last-child(-n+2){border-right:0;border-bottom:1px solid var(--line)}.subproject:last-child{border-bottom:0}.feature-media{min-height:300px}}
+/* Minimal Projects Page */
+.projects-page{
+  padding:88px 0 110px;
+}
+
+.projects-title{
+  margin-bottom:58px;
+}
+
+.projects-title .eyebrow{
+  margin-bottom:10px;
+}
+
+.projects-title h1{
+  font-size:clamp(48px,7vw,88px);
+  max-width:900px;
+}
+
+.project-stack{
+  display:grid;
+  gap:20px;
+}
+
+.project-group{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+}
+
+.project-group.dark{
+  background:var(--dark);
+  color:#fff;
+  border-color:var(--dark);
+}
+
+.project-group-head{
+  padding:30px 32px 26px;
+  display:flex;
+  justify-content:space-between;
+  gap:28px;
+  align-items:flex-start;
+}
+
+.project-number{
+  font:12px monospace;
+  color:#8a94a0;
+  margin-bottom:8px;
+}
+
+.project-group h2{
+  font-size:clamp(30px,4vw,48px);
+}
+
+.project-subtitle{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.dark .project-subtitle{
+  color:#aeb6c1;
+}
+
+.project-badge{
+  flex:0 0 auto;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--blue);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:7px 10px;
+}
+
+.dark .project-badge{
+  border-color:#343b46;
+  color:#9fb3ff;
+}
+
+.project-list{
+  border-top:1px solid var(--line);
+}
+
+.dark .project-list{
+  border-top-color:#2b313c;
+}
+
+.project-row{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:24px;
+  padding:22px 32px;
+  border-bottom:1px solid var(--line);
+  align-items:center;
+}
+
+.project-row:last-child{
+  border-bottom:0;
+}
+
+.dark .project-row{
+  border-bottom-color:#2b313c;
+}
+
+.project-name{
+  font-weight:700;
+  font-size:17px;
+}
+
+.project-meta{
+  text-align:right;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.dark .project-meta{
+  color:#aeb6c1;
+}
+
+@media(max-width:760px){
+  .projects-page{
+    padding-top:64px;
+  }
+
+  .project-group-head{
+    display:block;
+  }
+
+  .project-badge{
+    display:inline-block;
+    margin-top:18px;
+  }
+
+  .project-row{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+
+  .project-meta{
+    text-align:left;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap"><nav><a class="brand" href="index.html">TAEHYUN KIM<b>.</b></a><div class="links"><a href="index.html">Home</a><a href="research.html">Research</a><a class="active" href="projects.html">Projects</a><a href="publications.html">Publications</a><a href="cv.html">CV</a><a href="about.html">About</a></div></nav></div></header>
-<main class="project-page">
-<section class="page-hero"><div class="wrap projects-intro"><div><div class="eyebrow">Projects</div><h1>Robotics research,<br>from models to hardware.</h1></div><p class="summary">My work spans wheel-legged and humanoid robotics, with a common focus on dynamics, optimization, control, learning, and real-robot validation.</p></div></section>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html">TAEHYUN KIM<b>.</b></a>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-<section class="wrap track-section"><div class="track-label">01 · Wheel-Legged Robotics</div><article class="feature-card"><div class="feature-head"><div class="feature-copy"><div class="feature-kicker">Humanoids 2024 · MPPI · Hardware Validation</div><h2>TWIP-R with Dynamic Variance MPPI</h2><p class="desc">A model-based control framework for simultaneous trajectory tracking and balancing of a two-wheeled inverted-pendulum robot with roll, progressing from a compact template model to TRON1 hardware experiments.</p><div class="feature-meta"><span>Template Model</span><span>Nonlinear Dynamics</span><span>Partial Feedback Linearization</span><span>MPPI</span><span>Dynamic Variance</span><span>TRON1</span></div></div><div class="feature-media"><div class="media-label">WHEEL-LEGGED ROBOTICS / FEATURED PROJECT</div><div class="media-symbol">◉─◉</div><div class="media-note"><strong>TRON1 experiment video</strong><span>Tracking · balancing · disturbance recovery</span></div></div></div><div class="pipeline"><div class="pipe-step"><div class="n">01 / MODEL</div><h3>TWIP-R Template Model</h3><p>Compact nonlinear dynamics capture wheel motion, body pitch, roll behavior, and coupled balancing dynamics.</p></div><div class="pipe-step"><div class="n">02 / CONTROL</div><h3>Dynamic Variance MPPI</h3><p>Sampling variance adapts to tracking error: broad exploration during large errors and smoother control near equilibrium.</p></div><div class="pipe-step"><div class="n">03 / HARDWARE</div><h3>TRON1 Validation</h3><p>The controller is evaluated on the TRON1 platform for real-world tracking, balancing, and disturbance-recovery behavior.</p></div></div></article></section>
+<main class="projects-page">
+  <div class="wrap">
 
-<section class="wrap track-section"><div class="track-label">02 · Humanoid Robotics / Model-Based Control</div><article class="research-block"><div class="block-head"><div><div class="feature-kicker">Dynamics · Planning · Whole-Body Control</div><h2>Model-Based Humanoid Locomotion</h2></div><p>A control stack that connects reduced-order planning, contact-aware whole-body optimization, and trajectory optimization for dynamic humanoid walking.</p></div><div class="subprojects"><div class="subproject"><div class="meta">CONTACT-AWARE WBC</div><h3>Human-Like Heel-to-Toe Walking</h3><p>Heel strike and heel-off motion for a flat-foot humanoid without relying on toe joints or predefined joint-angle trajectories.</p><div class="tags"><span>Unitree G1</span><span>FSM</span><span>QP WBC</span><span>Contact Transition</span></div></div><div class="subproject"><div class="meta">ONLINE PLANNING</div><h3>Footstep Planning & MPC</h3><p>Receding-horizon footstep generation based on simplified humanoid dynamics for online adaptation of future footholds.</p><div class="tags"><span>LIPM</span><span>DCM</span><span>ZMP</span><span>MPC</span></div></div><div class="subproject"><div class="meta">WHOLE-BODY OPTIMIZATION</div><h3>Floating-Base QP Control</h3><p>Task-space motion generation with floating-base kinematics, contact constraints, posture objectives, and joint-limit regulation.</p><div class="tags"><span>QP IK</span><span>SE(3)</span><span>Joint Limits</span></div></div><div class="subproject"><div class="meta">TRAJECTORY OPTIMIZATION</div><h3>Dynamic Motion Optimization</h3><p>Optimization of body motion and contact forces for dynamically consistent humanoid locomotion and contact-rich tasks.</p><div class="tags"><span>SRBD</span><span>Centroidal Dynamics</span><span>Contact Force</span></div></div></div></article></section>
+    <div class="projects-title">
+      <div class="eyebrow">Projects</div>
+      <h1>Selected Robotics Projects</h1>
+    </div>
 
-<section class="wrap track-section"><div class="track-label">03 · Humanoid Robotics / Reinforcement Learning</div><article class="research-block dark"><div class="block-head"><div><div class="feature-kicker">Learning-Based Locomotion · Sim-to-Real</div><h2>Robust Humanoid Locomotion with RL</h2></div><p>Learning-based locomotion focused on robustness to model mismatch, compliant contacts, and deployment conditions that are difficult to capture with rigid analytical models alone.</p></div><div class="rl-highlight"><div class="rl-main"><div class="meta">FEATURED / CURRENT RESEARCH</div><h3>Robust Locomotion under Compliant Footwear</h3><p>A shoe-aware locomotion policy for Unitree G1 trained with a passive compliant shoe model and randomized stiffness, designed to remain stable when footwear changes the contact dynamics.</p><div class="tags"><span>Unitree G1</span><span>PPO</span><span>Domain Randomization</span><span>Compliant Contact</span><span>Sim-to-Real</span></div></div><div class="rl-media"><div><strong>Baseline vs. Shoe-Aware Policy</strong>Add synchronized simulation / real-robot comparison videos here.</div></div></div><div class="subprojects"><div class="subproject"><div class="meta">ROBUSTNESS</div><h3>Domain-Randomized Locomotion</h3><p>Learning policies across uncertain contact and mechanical parameters to improve robustness beyond a single nominal simulation model.</p></div><div class="subproject"><div class="meta">DEPLOYMENT</div><h3>Humanoid Sim-to-Real</h3><p>Evaluation of learned locomotion policies on real hardware with an emphasis on stability, disturbance recovery, and contact uncertainty.</p></div></div></article><p class="footer-note">Project pages will later include videos, paper links, diagrams, quantitative results, and implementation details.</p></section>
+    <div class="project-stack">
+
+      <section class="project-group">
+        <div class="project-group-head">
+          <div>
+            <div class="project-number">01</div>
+            <h2>Wheel-Legged Robotics</h2>
+            <div class="project-subtitle">TWIP-R with Dynamic Variance MPPI</div>
+          </div>
+          <div class="project-badge">Humanoids 2024</div>
+        </div>
+
+        <div class="project-list">
+          <div class="project-row">
+            <div class="project-name">TWIP-R Template Model</div>
+            <div class="project-meta">Nonlinear Dynamics</div>
+          </div>
+          <div class="project-row">
+            <div class="project-name">Dynamic Variance MPPI</div>
+            <div class="project-meta">MPPI · Partial Feedback Linearization</div>
+          </div>
+          <div class="project-row">
+            <div class="project-name">TRON1 Hardware Experiment</div>
+            <div class="project-meta">Tracking · Balancing · Disturbance Recovery</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-group">
+        <div class="project-group-head">
+          <div>
+            <div class="project-number">02</div>
+            <h2>Humanoid · Model-Based Control</h2>
+          </div>
+        </div>
+
+        <div class="project-list">
+          <div class="project-row">
+            <div class="project-name">Human-Like Heel-to-Toe Walking</div>
+            <div class="project-meta">FSM · Whole-Body Control</div>
+          </div>
+          <div class="project-row">
+            <div class="project-name">Online Footstep Planning</div>
+            <div class="project-meta">LIPM · DCM · MPC</div>
+          </div>
+          <div class="project-row">
+            <div class="project-name">Floating-Base QP Control</div>
+            <div class="project-meta">QP IK · Contact Constraints</div>
+          </div>
+          <div class="project-row">
+            <div class="project-name">Trajectory Optimization</div>
+            <div class="project-meta">Centroidal Dynamics · Contact Force</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-group dark">
+        <div class="project-group-head">
+          <div>
+            <div class="project-number">03</div>
+            <h2>Humanoid · Reinforcement Learning</h2>
+          </div>
+        </div>
+
+        <div class="project-list">
+          <div class="project-row">
+            <div class="project-name">Robust Locomotion under Compliant Footwear</div>
+            <div class="project-meta">Unitree G1 · PPO · Domain Randomization</div>
+          </div>
+          <div class="project-row">
+            <div class="project-name">Terrain-Adaptive Humanoid Locomotion</div>
+            <div class="project-meta">Learning-Based Control</div>
+          </div>
+          <div class="project-row">
+            <div class="project-name">Sim-to-Real Deployment</div>
+            <div class="project-meta">Real-Robot Validation</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
 </main>
-<footer><div class="wrap foot"><span>© 2026 Taehyun Kim</span><span>Projects</span></div></footer>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Taehyun Kim</span>
+    <span>Projects</span>
+  </div>
+</footer>
+
 </body>
 </html>
